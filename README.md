@@ -1,5 +1,6 @@
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/5bfdf9ce35ea4374807910f6cac5d3ef)](https://www.codacy.com/manual/klcodanr/Adobe-Client-Data-Layer-Extension?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PerficientDigital/Adobe-Client-Data-Layer-Extension&amp;utm_campaign=Badge_Grade)
 [![CircleCI](https://circleci.com/gh/PerficientDigital/Adobe-Client-Data-Layer-Extension.svg?style=svg)](https://circleci.com/gh/PerficientDigital/Adobe-Client-Data-Layer-Extension)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=PerficientDigital_Adobe-Client-Data-Layer-Extension&metric=alert_status)](https://sonarcloud.io/dashboard?id=PerficientDigital_Adobe-Client-Data-Layer-Extension)
 
 # Adobe Client Data Layer Launch Extension
 
