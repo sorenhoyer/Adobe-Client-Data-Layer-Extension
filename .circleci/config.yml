@@ -1,0 +1,73 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+      # specify the version you desire here
+      - image: circleci/node:12.8
+
+      # Specify service dependencies here if necessary
+      # CircleCI maintains a library of pre-built images
+      # documented at https://circleci.com/docs/2.0/circleci-images/
+      # - image: circleci/mongo:3.4.4
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      # Download and cache dependencies
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            # fallback to using the latest cache if no exact match is found
+            - v1-dependencies-
+
+      - run: npm install
+
+      - run:
+          name: Install build tools
+          command: npm install npx npm-run-all --no-save
+
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+
+
+      - run: mkdir ./reports
+
+      # Run and store eslint results
+      - run:
+          name: Run eslint
+          command: |
+            mkdir -p ./reports/eslint
+            ./node_modules/eslint/bin/eslint.js ./src/ --format junit --output-file ./reports/eslint/eslint.xml
+          when: always
+      - store_test_results:
+          path: ./reports/eslint
+      - store_artifacts:
+          path: ./reports/eslint
+
+      - run:
+          name: Run mocha tests
+          command: |
+            mkdir -p ./reports/mocha
+            ./node_modules/mocha/bin/mocha test --reporter mocha-junit-reporter
+          environment:
+            MOCHA_FILE: ./reports/mocha/mocha.xml
+          when: always
+      - store_test_results:
+          path: ./reports/mocha
+      - store_artifacts:
+          path: ./reports/mocha
+
+      # Build the thing
+      - run: npm run build
+
+      # Store the results
+      - store_artifacts:
+          path: ./dist

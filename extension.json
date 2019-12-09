@@ -1,0 +1,53 @@
+{
+  "displayName": "Adobe Client Data Layer",
+  "name": "adobe-client-data-layer",
+  "platform": "web",
+  "version": "1.0.0",
+  "description": "Integrate data and events from the Adobe Client Data Layer",
+  "author": {
+    "name": "Perficient Digital",
+    "url": "https://www.perficientdigital.com/what-we-do/technology-platforms/cx-platforms/adobe"
+  },
+  "iconPath": "icon.svg",
+  "viewBasePath": "dist/view/",
+  "dataElements": [{
+    "displayName": "Data Layer Element",
+    "name": "datalayerelement",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "path"
+      ]
+    },
+    "libPath": "dist/lib/dataElements/dataLayerElement.js",
+    "viewPath": "dataElements/dataLayerElement.html"
+  }],
+  "events": [{
+    "displayName": "Data Layer Event",
+    "name": "datalayerevent",
+    "schema": {
+      "$schema": "http://json-schema.org/draft-04/schema#",
+      "type": "object",
+      "properties": {
+        "event": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "event"
+      ]
+    },
+    "libPath": "dist/lib/events/dataLayerEvent.js",
+    "viewPath": "events/dataLayerEvent.html"
+  }],
+  "sharedModules": [{
+    "name": "jsonpath.js",
+    "libPath": "dist/lib/helpers/jsonpath.js"
+  }]
+}

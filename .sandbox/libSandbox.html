@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Reactor Extension Library Sandbox</title>
+
+  <link rel="stylesheet" href="//assets.adobedtm.com/activation/reactor/spectrum/2.9.0/spectrum-light.css">
+
+  <link href="sandbox.css" rel="stylesheet" type="text/css">
+  <script src="container.js"></script>
+  <script src="engine.js"></script>
+  <script src="adobe-client-data-layer.min.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    dataLayer.push({
+      data: {
+        page: {
+          title: document.title
+        }
+      }
+    });
+  </script>
+</head>
+
+<body class="spectrum spectrum--light">
+  <div class="nav">
+    <a class="spectrum-Button spectrum-Button--secondary spectrum-Button--quiet" href="editor.html">Go to rule editor</a>
+    <a class="spectrum-Button spectrum-Button--secondary spectrum-Button--quiet" href="viewSandbox.html">Go to view sandbox</a>
+  </div>
+
+  <h1 class="coral-Heading coral-Heading--1">Reactor Extension Library Sandbox</h1>
+
+  <h2 class="coral-Heading coral-Heading--2">Page Title from DL: <span id="dataLayerTitle"></span></h2>
+
+  <script>
+    _satellite.pageBottom();
+    var dlTitle = _satellite.getVar('Title');
+    document.getElementById('dataLayerTitle').innerText = dlTitle;
+  </script>
+</body>
+
+</html>
