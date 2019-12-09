@@ -1,8 +1,5 @@
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/ba04d9ecddf14a8194b07e3d4eb7df5b)](https://app.codacy.com/app/klcodanr/Sample-Launch-Extension?utm_source=github.com&utm_medium=referral&utm_content=PerficientDigital/Sample-Launch-Extension&utm_campaign=Badge_Grade_Dashboard)
-[![CircleCI](https://circleci.com/gh/PerficientDigital/Sample-Launch-Extension.svg?style=svg)](https://circleci.com/gh/PerficientDigital/Sample-Launch-Extension)
-![LGTM Alerts](https://img.shields.io/lgtm/alerts/github/PerficientDigital/Sample-Launch-Extension)
-![David](https://img.shields.io/david/PerficientDigital/Sample-Launch-Extension)
-![Sonar Quality Gate](https://img.shields.io/sonar/quality_gate/PerficientDigital_Sample-Launch-Extension?server=https%3A%2F%2Fsonarcloud.io)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/5bfdf9ce35ea4374807910f6cac5d3ef)](https://www.codacy.com/manual/klcodanr/Adobe-Client-Data-Layer-Extension?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=PerficientDigital/Adobe-Client-Data-Layer-Extension&amp;utm_campaign=Badge_Grade)
+[![CircleCI](https://circleci.com/gh/PerficientDigital/Adobe-Client-Data-Layer-Extension.svg?style=svg)](https://circleci.com/gh/PerficientDigital/Adobe-Client-Data-Layer-Extension)
 
 # Adobe Client Data Layer Launch Extension
 
